@@ -117,8 +117,8 @@ export default function Navbar() {
     { path: '/about', label: 'About' },
     { path: '/testing', label: 'Testing' },
     { path: '/history', label: 'History' },
-    // ✅ New item added below
-    { path: 'http://127.0.0.1:5500/Minor2025/test_case_generator/index.html', label: 'Test Case Generator', external: true }
+    // ✅ New item
+    { path: 'http://127.0.0.1:5500/test_case_generator/index.html', label: 'Test Case Generator', external: true }
   ];
 
   return (
@@ -161,11 +161,11 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
               >
                 {item.external ? (
-                  // ✅ Open external link in new tab
+                  // ✅ MODIFICATION HERE:
+                  // Removed target="_blank" and rel="noopener noreferrer"
+                  // to open the link in the same tab.
                   <a
                     href={item.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="nav-link"
                   >
                     {item.label}
